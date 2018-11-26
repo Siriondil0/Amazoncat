@@ -27,35 +27,53 @@
       </div>
     </nav>
 
+
+
+
+
+
+
+
     <!-- Page Content -->
-    <div class="container">
-
-      <div class="row">
-
-        <div class="col-lg-3">
-          <h1><%= @item.title %></h1>
+<br>
+<br>
+        <div class="left_show">
+          <h1 class="h_show"><%= @item.title %></h1>
+          <img src="<%= @item.image_url %>" class="img_size_show">
         </div>
-        <!-- /.col-lg-3 -->
 
-        <img src="<%= @item.image_url %>">
-        <h5><%=@item.price%></h5>
-        <p class="card-text"><%=@item.description%></p>
-        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-        <button> panier </button>
-
-      </div>
-      <!-- /.row -->
-
-    </div>
+        <div class="right_show">
+        <br>
+        <div class="card border-secondary mb-3" style="max-width: 40rem;">
+        <div class="card-body text-secondary">
+        <div class="title_header">
+        <small class="text-muted"> &#9733; &#9733; &#9733; &#9733; &#9734;</small>
+        </div>
+        <br>
+        <p class="card-text">Format 20x30cm dans un cadre noir satin.</p>
+        <p class="card-text">Photo de <%= @item.title %>, un chat tout mignon de la famille des <%=@item.description%>.</p>
+        <div class ="prix">
+        <div class="alert alert-secondary" role="alert" style="max-width: 20rem;">
+         PHOTO AU PRIX FOU DE : <strong><%=@item.price%>€</strong> !!
+        </div>
+        </div>
+        <span class="texte_panier">Ajouter au panier --></span>
+        <%= link_to product_path do %>
+        <%= image_tag "https://images-na.ssl-images-amazon.com/images/I/71AHbSSprnL._SX355_.jpg", class: "image_path" %>
+        <% end %>
+        <br>
+        <br>
+        </div>
+        </div>
+        </div>
     <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Groupe THP Grenoble 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+
+
+
+
+
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
