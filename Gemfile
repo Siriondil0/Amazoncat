@@ -4,7 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.1'
 
 gem 'jquery-rails'
-gem 'rspec-rails'
+group :test, :development do
+  gem 'rspec-rails'
+end
 gem 'dotenv-rails', :require => 'dotenv/rails-now'
 gem 'gmail'
 gem 'rails-controller-testing'
