@@ -1,0 +1,8 @@
+<% @content.each do |item| %>
+	  <tr id='element_<%=item.id%>', remote: true>
+      <td><img class="avatar" src='<%=item.image_url%>'></td>
+		  <td><%= item.title %></td>
+		  <td><%= item.description  %></td>
+			<td><%= link_to " Delete", cart_path(@cart, :id_delete => item.id), class: "btn btn-sm btn-danger bouton-d far fa-trash-alt", remote: true,  method: :delete, data: { confirm: "Are you sure?" } %></td>
+	  </tr>
+  <% end %>
