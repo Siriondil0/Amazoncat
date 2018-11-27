@@ -73,7 +73,9 @@
                   <p class="card-text"><%=item.description%></p>
                 </div>
                 <div class="card-footer">
+                  <%if user_signed_in?%>
                   <%= link_to "Add to cart", "/cart?id_add="+ item.id.to_s, class: "btn btn-sm btn-danger bouton-d far fa-trash-alt",  method: :post%>
+                  <%end%>
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
               </div>

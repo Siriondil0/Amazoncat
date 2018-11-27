@@ -13,7 +13,9 @@ class ProductController < ApplicationController
 
   def show
     @item= Item.find(params[:id])
-    @cart=Cart.where(:user_id => current_user.id)[0]
+    if user_signed_in?
+      @cart=Cart.where(:user_id => current_user.id)[0]
+    end
   end
 
 end
