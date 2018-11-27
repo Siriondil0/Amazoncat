@@ -42,14 +42,6 @@ ActiveRecord::Schema.define(version: 2018_11_27_124825) do
     t.bigint "item_id", null: false
   end
 
-  create_table "mailers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "login"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id"
     t.string "quantities", default: [], array: true
