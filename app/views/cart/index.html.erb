@@ -7,6 +7,9 @@
   <div id="checkout">
     <%= link_to "Checkout", "/cart/checkout", class: "btn btn-sm btn-info bouton-d far fa-trash-alt", remote: true,  method: :post %>
   </div>
+  <div >
+    <%= link_to "Payer", "/charges/new", class: "btn btn-sm btn-info bouton-d far fa-trash-alt" %>
+  </div>
 <% else%>
 <p>Enregistrez vous pour avoir un panier</p>
 <% end %>

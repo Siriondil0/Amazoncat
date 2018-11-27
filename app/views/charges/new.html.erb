@@ -1,4 +1,5 @@
-  <br/><br/><br/><br/><h3>Prix total de chat</h3>
+  <br/><br/><br/><br/>
+  <h3>Prix total de chat</h3>
   
   <%= form_tag charges_path do %>
     <article>
@@ -8,13 +9,14 @@
         </div>
       <% end %>
       <label class="amount">
-        <span>Amount: <%=@price%></span>
+        <span>Amount: <%= @price %>$</span>
       </label>
     </article>
 
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="Paiement de chat"
-            data-amount="<%=@price%>"
+            data-amount="<%= @convert_price %>"
             data-locale="auto"></script>
   <% end %>
+</div>

@@ -1,15 +1,21 @@
 class ChargesController < ApplicationController
-  #def initialize(user_id, card)
-  #  @user = User.find(user_id)
-  #  @card = card
-  #end
-  
   def new
+    if user_signed_in?
+        @cart = Cart.where(:user_id => current_user.id)[0]
+        @content = @cart.items
+        @price = 0
+        @content.each_with_index do |content, index| 
+          @price += content.price * @cart.quantities[index].to_i
+        end
+        @price
+        @convert_price = @price*100
+    else
+    end
   end
   
   def create
-    # Amount in cents
-    @amount = 9900
+    # Price in cents to convert
+    @amount = 8000
   
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],
