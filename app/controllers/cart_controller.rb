@@ -5,8 +5,8 @@ class CartController < ApplicationController
  
   def index
     if user_signed_in?
-      @cart=Cart.where(:user_id => current_user.id)[0]
-      @content=@cart.items
+      @cart = Cart.where(:user_id => current_user.id)[0]
+      @content = @cart.items
       @price = 0
       @content.each_with_index do |content, index| 
         @price += content.price * @cart.quantities[index].to_i
@@ -16,9 +16,9 @@ class CartController < ApplicationController
     end
   end
 
-  def post
+  def create
     if user_signed_in?
-      @cart=Cart.where(:user_id => current_user.id)[0]
+      @cart = Cart.where(:user_id => current_user.id)[0]
       unless @cart.item_ids.include?(params[:id_add].to_i)
         puts 'newitem'
         @new_cart = @cart.item_ids << params[:id_add].to_i
@@ -54,7 +54,7 @@ class CartController < ApplicationController
     @cart.quantities.delete_at(@ind)
     @cart.save
     @cart.item_ids = @array
-    @content=@cart.items
+    @content = @cart.items
     @price = 0
     @content.each_with_index do |content, index| 
       @price += content.price * @cart.quantities[index].to_i
@@ -62,4 +62,14 @@ class CartController < ApplicationController
     @price
   end
   
+  def checkout
+    @cart = Cart.where(:user_id => current_user.id)[0]
+    @order = Order.create!(user: @cart.user, quantities: @cart.quantities)
+    @order.item_ids = @cart.item_ids
+    @cart.quantities = []
+    @cart.save
+    Cart.where(:user_id => current_user.id)[0].item_ids=[]
+    redirect_to "/product"
+    flash[:alert] = "You successfully did your order"
+  end
 end
