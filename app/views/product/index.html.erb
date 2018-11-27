@@ -101,6 +101,7 @@
                   <p class="card-text"><%=item.description%></p>
                 </div>
                 <div class="card-footer">
+                  <%= link_to "Add to cart", cart_path(@cart, :id_add => item.id), class: "btn btn-sm btn-danger bouton-d far fa-trash-alt",  method: :post%>
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
               </div>
@@ -126,7 +127,4 @@
       <!-- /.container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

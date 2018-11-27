@@ -42,7 +42,7 @@
         <p class="card-text"><%=@item.description%></p>
         <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
         <button> panier </button>
-
+        <%= link_to "Add to cart", cart_path(:id_add => @item.id), class: "btn btn-sm btn-notice bouton-d far fa-trash-alt",  method: :post%>
       </div>
       <!-- /.row -->
 
@@ -57,7 +57,4 @@
       <!-- /.container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>
