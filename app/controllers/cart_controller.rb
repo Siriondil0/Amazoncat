@@ -13,7 +13,6 @@ class CartController < ApplicationController
       end
       @price
     else
-
     end
   end
 
