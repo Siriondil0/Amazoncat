@@ -7,6 +7,11 @@ class CartController < ApplicationController
     if user_signed_in?
       @cart=Cart.where(:user_id => current_user.id)[0]
       @content=@cart.items
+      @price = 0
+      @content.each do |content|
+        @price += content.price
+      end
+      @price
     else
 
     end
@@ -39,6 +44,11 @@ class CartController < ApplicationController
     @array.delete(params[:id_delete].to_i)
     @cart.item_ids = @array
     @content=@cart.items
+    @price = 0
+    @content.each do |content|
+      @price += content.price
+    end
+    @price
   end
   
 end
