@@ -1,0 +1,12 @@
+<h1>Cart#index</h1>
+
+<% if user_signed_in? %>
+  <div id = "<%=@cart.id%>">
+    <%= render 'layouts/content' %>
+  </div>
+  <div id="checkout">
+    <%= link_to "Checkout", "#", class: "btn btn-sm btn-info bouton-d far fa-trash-alt", remote: true,  method: :get %>
+  </div>
+<% else%>
+<p>Enregistrez vous pour avoir un panier</p>
+<% end %>

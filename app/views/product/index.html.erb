@@ -66,7 +66,7 @@
           <% @items.each do |item|  %>
             <div class="col-lg-4 col-md-6 mb-4" id="img-<%=item.id%>">
               <div class="card h-100">
-                <a href="/product/<%=item.id%>"><img class="card-img-top" src='<%=item.image_url%>' alt=""></a>
+                <a href="/product/<%=item.id%>"><img width="250" height="180" class="card-img-top" src='<%=item.image_url%>' alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
                     <a href="/product/<%=item.id%>"><%=item.title%></a>
@@ -75,6 +75,7 @@
                   <p class="card-text"><%=item.description%></p>
                 </div>
                 <div class="card-footer">
+                  <%= link_to "Add to cart", cart_path(@cart, :id_add => item.id), class: "btn btn-sm btn-danger bouton-d far fa-trash-alt",  method: :post%>
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
               </div>
@@ -100,7 +101,4 @@
       <!-- /.container -->
     </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

@@ -12,6 +12,8 @@
 
   <body>
     <%= render "shared/navbar" %>
+    <%= render 'shared/modalin'  %>
+    <%= render 'shared/modalup'  %>
     
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
@@ -21,6 +23,8 @@
     <% end %>
 
     <%= yield %>
+
+    <%= render 'shared/footer'  %>
 
   </body>
 </html>

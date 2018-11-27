@@ -1,0 +1,27 @@
+
+<table class="table">
+  <thead>
+	  <tr>
+      <td>Minitature</td>
+      <td>Nom de l'affiche</td>
+	  	<td>Description</td>
+			<td></td>
+		</tr>
+	</thead>
+  <tbody id = "<%=@cart.id%>">
+  <%if @content%>
+    <% @content.each do |item| %>
+	    <tr id='element_<%=item.id%>', remote: true>
+        <td><img class="avatar" src='<%=item.image_url%>'></td>
+		    <td><%= item.title %></td>
+		    <td><%= item.description  %></td>
+			  <td><%= link_to " Delete", cart_path(@cart, :id_delete => item.id), class: "btn btn-sm btn-danger bouton-d far fa-trash-alt", remote: true,  method: :delete, data: { confirm: "Are you sure?" } %></td>
+	    </tr>
+    <% end %>
+  <% end %>
+  </tbody>
+</table>
+<p id="price">Votre total actuel est de <%=@price%> $</p>
+<div>
+
+    
