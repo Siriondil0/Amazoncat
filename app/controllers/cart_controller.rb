@@ -5,7 +5,7 @@ class CartController < ApplicationController
  
   def index
     if user_signed_in?
-      @cart=Cart.where(:user_id => params[:id])[0]
+      @cart=Cart.where(:user_id => current_user.id)[0]
       @content=@cart.items
     else
 
