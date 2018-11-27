@@ -23,7 +23,7 @@
         </div>
         </div>
         <span class="texte_panier">Ajouter au panier --></span>
-        <%= link_to "Add to cart", cart_path(:id_add => @item.id), class: "btn btn-sm btn-notice bouton-d far fa-trash-alt",  method: :post%>
+        <%= link_to "Add to cart", "/cart?id_add="+ item.id.to_s, class: "btn btn-sm btn-danger bouton-d far fa-trash-alt",  method: :post%>
         <br>
         <br>
         </div>

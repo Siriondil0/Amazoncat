@@ -7,8 +7,6 @@
 
     <title>Shop Homepage - Start Bootstrap Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
 </head>
@@ -75,7 +73,7 @@
                   <p class="card-text"><%=item.description%></p>
                 </div>
                 <div class="card-footer">
-                  <%= link_to "Add to cart", cart_path(@cart, :id_add => item.id), class: "btn btn-sm btn-danger bouton-d far fa-trash-alt",  method: :post%>
+                  <%= link_to "Add to cart", "/cart?id_add="+ item.id.to_s, class: "btn btn-sm btn-danger bouton-d far fa-trash-alt",  method: :post%>
                   <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
                 </div>
               </div>
