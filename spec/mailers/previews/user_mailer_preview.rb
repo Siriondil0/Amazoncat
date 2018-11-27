@@ -4,4 +4,14 @@ class UserMailerPreview < ActionMailer::Preview
       @user = User.last
       UserMailer.welcome_email(@user)
   end
+
+   def client_order
+      @user = User.last
+      UserMailer.client_order(@user)
+   end
+
+    def admin_order
+      @user = User.last
+      UserMailer.admin_order(@user)
+   end
 end
