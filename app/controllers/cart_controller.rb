@@ -63,13 +63,20 @@ class CartController < ApplicationController
   end
   
   def checkout
-    @cart = Cart.where(:user_id => current_user.id)[0]
-    @order = Order.create!(user: @cart.user, quantities: @cart.quantities)
-    @order.item_ids = @cart.item_ids
-    @cart.quantities = []
-    @cart.save
-    Cart.where(:user_id => current_user.id)[0].item_ids=[]
-    redirect_to "/product"
-    flash[:alert] = "You successfully did your order"
+    if user_signed_in?
+      @cart = Cart.where(:user_id => current_user.id)[0]
+      if @cart.quantities != []
+        @order = Order.create!(user: @cart.user, quantities: @cart.quantities)
+        @order.item_ids = @cart.item_ids
+        @cart.quantities = []
+        @cart.save
+        Cart.where(:user_id => current_user.id)[0].item_ids=[]
+        redirect_to "/product"
+        flash[:success] = "You successfully did your order"
+      else
+        redirect_to "/cart"
+        flash[:alert] = "Your cart is empy"
+      end
+    end
   end
 end
