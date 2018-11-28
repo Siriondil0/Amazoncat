@@ -1,8 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+<<<<<<< HEAD
     <link rel="shortcut icon" type="image/x-icon" href="/assets/logo_cat.png">
     <title>Télé à Chat</title>
+=======
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Telechat</title>
+
+>>>>>>> 4b58c3abc2b891651efd954b74c76508b822491e
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,20 +23,26 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <%= render 'shared/modalin'  %>
-    <%= render 'shared/modalup'  %>
-    
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+    <div class="wrapper">
+      <%= render "shared/navbar" %>
+      <%= render 'shared/modalin'  %>
+      <%= render 'shared/modalup'  %>
+      
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
 
-    <%= yield %>
+      <%= yield %>
 
-    <%= render 'shared/footer'  %>
+      <div class="push"></div>
+    </div>
+
+    <footer class="footer">
+      <%= render 'shared/footer' %>
+    </footer>
 
   </body>
 </html>

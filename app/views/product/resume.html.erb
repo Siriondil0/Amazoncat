@@ -1,11 +1,10 @@
 <h1>Cart#index</h1>
-
+<p></p>
 <div class="section">
   <% if user_signed_in? %>
-    <div id = "<%=@cart.id%>">
-      <%= render 'layouts/content_cart' %>
+    <div class='resume'>
+      <%= render 'layouts/content_admin' %>
     </div>
-    
   <% else%>
   <p>Enregistrez vous pour avoir un panier</p>
   <% end %>

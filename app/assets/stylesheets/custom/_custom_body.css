@@ -14,3 +14,16 @@ body {
   	background-size: cover;
 }
 
+<<<<<<< HEAD
+=======
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+>>>>>>> 4b58c3abc2b891651efd954b74c76508b822491e
