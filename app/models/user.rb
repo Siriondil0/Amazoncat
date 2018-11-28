@@ -5,7 +5,13 @@ class User < ApplicationRecord
   has_many :orders
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
- 
+  validate :validate_username
+
+  def validate_username
+    if User.where(email: username).exists?
+      errors.add(:username, :invalid)
+    end
+  end
   #has_many :credit_cards, dependent: :destroy
  
   #after_commit :assign_customer_id, on: :create

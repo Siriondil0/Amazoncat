@@ -12,7 +12,22 @@ RSpec.describe User, type: :model do
       )
       expect(user.valid_password?('password123')).to be_truthy
     end
-
+    it 'is dont allow duplicate' do
+      User.create(
+        username: 'testtest',
+        email: 'test@example.com', 
+        password: 'password123',
+        password_confirmation: 'password123'
+      )
+      user = User.new(
+        username: 'testtest',
+        email: 'test@example.com', 
+        password: 'password123',
+        password_confirmation: 'password123'
+      ).save
+      expect(user).to eq(false)
+    end
+    
     
   end
 end
