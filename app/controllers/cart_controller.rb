@@ -105,7 +105,7 @@ class CartController < ApplicationController
         flash[:success] = "You successfully did your order"
       else
         redirect_to "/cart"
-        flash[:alert] = "Your cart is empy"
+        flash[:alert] = "Your cart is empty"
       end
     end
   end

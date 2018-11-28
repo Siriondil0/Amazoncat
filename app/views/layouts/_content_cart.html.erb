@@ -31,14 +31,17 @@
 </table>
 <p id="price">Votre total actuel est de <%=@price%> $</p>
 
-<div class="row justify-content-between">
-  <div class="col-3" id="checkout">
-    <%= link_to "Vider le panier", "/cart/checkout", class: "btn btn-sm btn-info bouton-d far fa-trash-alt", remote: true,  method: :post %>
-  </div>
-  <div class="col-3">
-    <%= link_to "Payer", "/charges/new", class: "btn btn-sm btn-info bouton-d far fa-trash-alt" %>
+<% if @price !=0 %>
+  <div class="row justify-content-between">
+    <div class="col-6" >
+      <%= link_to "Vider le panier", "#", class: "btn btn-sm btn-info bouton-d far fa-trash-alt", remote: true,  method: :post %>
+    </div>
+    <div class="col-6">
+        <%= link_to "Payer", "/charges/new", class: "btn btn-lg btn-info bouton-d far fa-trash-alt" %>
     </div>
   </div>
+<% end %>
+
 </div>
 <p>&nbsp;</p>
     
