@@ -45,6 +45,34 @@ class CartController < ApplicationController
   end
 
   def update
+    @cart = Cart.find(params[:id])
+    @array = @cart.item_ids
+    @ind = @cart.item_ids.index(params[:id_modify].to_i)
+    puts params[:increase]
+    puts params[:increase].class
+    if params[:increase] == "true"
+      @cart.quantities[@ind] = @cart.quantities[@ind].to_i + 1
+      @cart.save
+    else
+      @cart.quantities[@ind] = @cart.quantities[@ind].to_i - 1
+      puts 
+      if @cart.quantities[@ind] == 0
+        @array = @cart.item_ids
+        @array.delete(params[:id_modify].to_i)
+        @cart.quantities.delete_at(@ind)
+        @cart.save
+        @cart.item_ids = @array
+      else
+        @cart.quantities[@ind] -= 1
+        @cart.save
+      end
+    end
+    @content = @cart.items
+    @price = 0
+    @content.each_with_index do |content, index| 
+      @price += content.price * @cart.quantities[index].to_i
+    end
+    @price
   end
 
   def destroy

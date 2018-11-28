@@ -16,7 +16,13 @@
         <td><img class="avatar" width="200" height="120" class="card-img-top"  src='<%=item.image_url%>'></td>
 		    <td><%= item.title %></td>
 		    <td><%= item.description  %></td>
-        <td><%= @cart.quantities[index]%>
+        <td>
+        <div class="d-flex flex-row align-items-center justify-content-center">
+          <%= link_to " - ", cart_path(@cart, :id_modify => item.id, :increase => false), class: "btn btn-sm btn-success", remote: true,  method: :patch%>
+          &nbsp;<%= @cart.quantities[index]%>&nbsp;
+          <%= link_to " + ", cart_path(@cart, :id_modify => item.id, :increase => true), class: "btn btn-sm btn-success", remote: true,  method: :patch%>
+        </div>
+        </td>
 			  <td><%= link_to " Delete", cart_path(@cart, :id_delete => item.id), class: "btn btn-sm btn-danger bouton-d far fa-trash-alt", remote: true,  method: :delete, data: { confirm: "Are you sure?" } %></td>
 	    </tr>
     <% end %>
