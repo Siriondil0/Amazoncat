@@ -4,17 +4,13 @@
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
   </head>
   <body>
-    <h1> Bonjour <%= @user.username %>  </h1>
+    <h1> Bonjour <%= @user.username %> </h1>
     <h1> Nous préparons votre commande ! </h1>
 
-    <p>Le total de votre commande est: <%= @cart.total %></p>
+    <p>Le total de votre commande est de: </p>
     <p>Nous vous remercions pour votre confiance.</p>
     <p>A bientôt sur Teleachat.com</p>
 
-    <p>
-      <% @cart.line_items.each do |li| %>
-       <img src="<%= li.item.image_url %>">
-      <% end %>
-    </p>
+    
   </body>
 </html>

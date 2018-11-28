@@ -6,8 +6,8 @@ class UserMailerPreview < ActionMailer::Preview
   end
 
    def client_order
-      @user = User.last
-      UserMailer.client_order(@user)
+      @cart= Cart.last
+      UserMailer.client_order(@cart)
    end
 
     def admin_order
@@ -15,3 +15,5 @@ class UserMailerPreview < ActionMailer::Preview
       UserMailer.admin_order(@user)
    end
 end
+
+
