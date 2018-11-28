@@ -146,13 +146,9 @@ GEM
     minitest (5.11.3)
     msgpack (1.2.4)
     multi_json (1.13.1)
-<<<<<<< HEAD
-    netrc (0.11.0)
-=======
     multipart-post (2.0.0)
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
->>>>>>> 7d6396a441bfb0fd4cfcc78ceb9908889c153b58
     nio4r (2.3.1)
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
