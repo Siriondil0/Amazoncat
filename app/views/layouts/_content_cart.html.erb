@@ -30,6 +30,14 @@
   </tbody>
 </table>
 <p id="price">Votre total actuel est de <%=@price%> $</p>
-<div>
 
+<div class="row justify-content-between">
+  <div class="col-4" id="checkout">
+    <%= link_to "Vider le panier", "/cart/checkout", class: "btn btn-sm btn-info bouton-d far fa-trash-alt", remote: true,  method: :post %>
+  </div>
+  <div class="col-4">
+    <%= link_to "Payer", "/charges/new", class: "btn btn-sm btn-info bouton-d far fa-trash-alt" %>
+    </div>
+  </div>
+</div>
     

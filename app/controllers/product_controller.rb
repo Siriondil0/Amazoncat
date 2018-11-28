@@ -20,7 +20,7 @@ class ProductController < ApplicationController
 
   def resume
     if current_user.admin?
-      @orders = Orders.all
+      @orders = Order.all
     else
       redirect_to root_path
     end
