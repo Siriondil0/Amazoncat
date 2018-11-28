@@ -12,6 +12,13 @@ class User < ApplicationRecord
       errors.add(:username, :invalid)
     end
   end
+  enum role: [:user, :vip, :admin]
+  after_initialize :set_default_role, :if => :new_record?
+
+  def set_default_role
+    self.role ||= :user
+  end
+
   #has_many :credit_cards, dependent: :destroy
  
   #after_commit :assign_customer_id, on: :create

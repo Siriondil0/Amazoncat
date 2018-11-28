@@ -18,4 +18,12 @@ class ProductController < ApplicationController
     end
   end
 
+  def resume
+    if current_user.admin?
+      @orders = Orders.all
+    else
+      redirect_to root_path
+    end
+  end
+
 end
