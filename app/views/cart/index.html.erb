@@ -1,15 +1,17 @@
 <h1>Cart#index</h1>
 
-<% if user_signed_in? %>
-  <div id = "<%=@cart.id%>">
-    <%= render 'layouts/content' %>
-  </div>
-  <div id="checkout">
-    <%= link_to "Checkout", "/cart/checkout", class: "btn btn-sm btn-info bouton-d far fa-trash-alt", remote: true,  method: :post %>
-  </div>
-  <div >
-    <%= link_to "Payer", "/charges/new", class: "btn btn-sm btn-info bouton-d far fa-trash-alt" %>
-  </div>
-<% else%>
-<p>Enregistrez vous pour avoir un panier</p>
-<% end %>
+<div class="section">
+  <% if user_signed_in? %>
+    <div id = "<%=@cart.id%>">
+      <%= render 'layouts/content' %>
+    </div>
+    <div id="checkout">
+      <%= link_to "Vider le panier", "/cart/checkout", class: "btn btn-sm btn-info bouton-d far fa-trash-alt", remote: true,  method: :post %>
+    </div>
+    <div >
+      <%= link_to "Payer", "/charges/new", class: "btn btn-sm btn-info bouton-d far fa-trash-alt" %>
+    </div>
+  <% else%>
+  <p>Enregistrez vous pour avoir un panier</p>
+  <% end %>
+</div>

@@ -18,18 +18,26 @@
   </head>
 
   <body>
-    <%= render "shared/navbar" %>
-    <%= render 'shared/modalin'  %>
-    <%= render 'shared/modalup'  %>
-    
-    <% if notice %>
-      <p class="alert alert-success"><%= notice %></p>
-    <% end %>
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
+    <div class="wrapper">
+      <%= render "shared/navbar" %>
+      <%= render 'shared/modalin'  %>
+      <%= render 'shared/modalup'  %>
+      
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+        <p class="alert alert-danger"><%= alert %></p>
+      <% end %>
 
-    <%= yield %>
+      <%= yield %>
+
+      <div class="push"></div>
+    </div>
+
+    <footer class="footer">
+      <%= render 'shared/footer' %>
+    </footer>
 
   </body>
 </html>

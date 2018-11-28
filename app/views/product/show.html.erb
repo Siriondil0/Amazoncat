@@ -23,8 +23,7 @@
         </div>
         </div>
         <%if user_signed_in?%>
-        <span class="texte_panier">Ajouter au panier --></span>
-        <%= link_to "Add to cart", "/cart?id_add="+ item.id.to_s, class: "btn btn-sm btn-danger bouton-d far fa-trash-alt",  method: :post%>
+        <%= link_to "Add to cart", "/cart?id_add="+ @item.id.to_s, class: "btn btn-sm btn-danger bouton-d far fa-trash-alt",  method: :post%>
         <%end%>
         <br>
         <br>
@@ -32,7 +31,5 @@
         </div>
         </div>
     <!-- /.container -->
-
-    <%= render 'shared/footerrelative' %>
 
 </body>
