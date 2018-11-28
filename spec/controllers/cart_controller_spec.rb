@@ -4,8 +4,8 @@ RSpec.describe CartController, type: :controller do
 
   describe "GET #index" do
     it "returns http success" do
-      get 'cart'
-      expect(response).to be_failure
+      get :index
+      expect(response).to be_success
     end
   end
 
