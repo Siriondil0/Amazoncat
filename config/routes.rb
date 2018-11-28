@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   resources :cart
   get 'home/index'
-  get 'product/resume', to: 'product#resume'
+  get '/resume', to: 'product#resume'
+  get '/historique', to: 'product#past_orders'
   devise_for :users
   root to: "home#index"
   get '/test', to: 'test#test'
