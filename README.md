@@ -14,12 +14,13 @@ Avant de lever des millions, il nous faut un site internet. Ce sera le projet du
 
 ## Pour le tester
 En local: 
-*faire `bundle install`
-*créer la base de donnée avec `rails db:create`
-*faire les migrations avec `rails db:migrate`
-*seeder la page avec `rails db:seed`
+* faire `bundle install`;
+* créer la base de donnée avec `rails db:create`;
+* faire les migrations avec `rails db:migrate`;
+* seeder la page avec `rails db:seed`.
 
 ## Lien Heroku ::tiger:
+
 [Lien To do list sur Heroku](https://teleachat.herokuapp.com/)
 
 ## Projet réalisé par :tea: :
