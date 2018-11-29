@@ -5,7 +5,12 @@ class CartController < ApplicationController
  
   def index
     if user_signed_in?
-      @cart = Cart.where(:user_id => current_user.id)[0]
+      @cart=Cart.where(:user_id => current_user.id)[0]
+      if @cart
+        @cart
+      else
+        @cart = Cart.create!(user_id: current_user.id)
+      end
       @content = @cart.items
       @price = 0
       @content.each_with_index do |content, index| 
