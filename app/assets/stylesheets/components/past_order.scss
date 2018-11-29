@@ -1,0 +1,27 @@
+.list {
+  align-items: left;
+  overflow: scroll;
+	height: 400px;
+}
+.list-group-item{
+  background-color: rgba(#e8e8e8, 0.2) !important;
+  color: white !important;
+  border: none !important;
+}
+
+
+.list-group-item:hover {
+  background-color: rgba(#e8e8e8, 0.4) !important;
+}
+
+.list-group-item:active {
+  background-color: #e4eaff !important;
+}
+
+.bouton-d {
+  float: right;
+  display: inline-block;
+}
+.orders{
+  list-style: none;
+}
