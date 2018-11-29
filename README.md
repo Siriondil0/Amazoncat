@@ -1,35 +1,52 @@
 
-# THP PROJET DEMI-FINAL "E-COMMERCE"
+# THP PROJET EN GROUPE - BOUTIQUE EN LIGNE
 
-:smiley: :smiley: :smiley: :smiley: :smiley: :smiley: :smiley: :smiley: :smiley:
+IL est là. Il est beau. C'est notre projet de la boutique en ligne !!!!
+![](https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif)
 
-##  une boutique en ligne qui vend des photos de chatons :
-La boutique sera simple : un visiteur peut aller sur le site, qui affiche les produits à vendre. Il peut aller sur les pages du site, puis en s'inscrivant peut les ajotuer à son panier. À partir de son panier, il peut passer commande, payer via Stripe, puis il recevra par email les produits commandés. L'administrateur du site recevra un email pour lui annoncer qu'une photo de chaton a été vendue.
+##  De quoi ça s'agit :
+Télé à Chat (c'est son nom) est un site qui met en vente des photos de chatons tous mignons !
+
+##  Le cahier des charges :
+
+- un utisateur :neckbeard: doit pouvoir s'incrire, se connecter et ajouter des photos de chats dans son panier. 
+- il peut gérer son panier, passer commande via stripe.
+- il est le seul à avoir accès à son panier.
+- faire des pages secretes que seul l'admin peut voir.
+- envoyer des newsletters par mail à l'inscription et lors des commandes.
+- intégrer du front bien stylé
+
 
 ## La méthodologie:
+TOUT EST FONCTIONNEL ! On a rempli tous les critères du Trello de THP. Sauf pour Active Storage qui, à l'heure ou on écrit ce Readme, galère encore un peu. On espère que la nuit va réssoudre le truc ! 
+Dans l'ensemble on est resté simple. Pas de feature de l'espace et l'utilisation d'un template bloodstrap.
 
-   `Nous allons vous faire utiliser la méthode des user stories, très pratique pour faire l'état des lieux des fonctionnalités à implémenter.`
 
-Avant de lever des millions, il nous faut un site internet. Ce sera le projet du cette longue semaine.
-
-## Pour le tester
+## Pour le tester 
 En local: 
 * faire `bundle install`;
 * créer la base de donnée avec `rails db:create`;
 * faire les migrations avec `rails db:migrate`;
 * seeder la page avec `rails db:seed`.
 
-## Lien Heroku ::tiger:
+## Lien Heroku : :cat2:
 
 [Lien Télé à chat sur Heroku](https://teleachat.herokuapp.com/)
 
-## Projet réalisé par :tea: :
+## Projet réalisé par la team de Grenoble : :tea: :
 
-* Guillaume Pichot  slack/  @Guillaume    :tropical_fish:
-* Hai-Dang Ha-Thuc  slack/  @Hai-Dang     :tropical_fish:
-* Fayçal Meghzili   slack/  @Fays         :tropical_fish:
-* Samuel Assani     slack/  @sassani      :tropical_fish:
-* Romain Recher     slack/  @RomainRecher :tropical_fish:
+* Guillaume Pichot  slack/  @Guillaume    :hear_no_evil:
+* Hai-Dang Ha-Thuc  slack/  @Hai-Dang     :skull:
+* Fayçal Meghzili   slack/  @Fays         :guardsman:
+* Samuel Assani     slack/  @sassani      :japanese_ogre:
+* Romain Recher     slack/  @RomainRecher :cop:
+
+## Une petite blague pour finir :tea: :
+
+Qu'est ce qu'un chat demande quand il entre dans une pharmacie?
+:arrow_down_small:
+:arrow_down_small:
+-Puis-je avoir un sirop pour ma toux?
 
 
 :end: :end: :end: :end: :end: :end: :end: :end: :end: :end: :end:
