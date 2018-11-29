@@ -4,8 +4,14 @@ class User < ApplicationRecord
   has_one :cart
   has_many :orders
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :confirmable
   validate :validate_username
+  after_create :welcome_email
+
+  def welcome_email
+    UserMailer.welcome_email(self).deliver_now!
+  end
 
   def validate_username
     if User.where(email: username).exists?
