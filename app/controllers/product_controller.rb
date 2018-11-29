@@ -21,6 +21,11 @@ class ProductController < ApplicationController
   def resume
     if current_user.admin?
       @orders = Order.all
+      @users = User.all
+      @amount = 0
+      @orders.each do |order|
+        @amount += order.price.to_i
+      end
     else
       redirect_to root_path
     end
@@ -32,5 +37,9 @@ class ProductController < ApplicationController
     else
       redirect_to root_path
     end
+  end
+
+  def toggle_past
+    @order = Order.find(params[:id])
   end
 end

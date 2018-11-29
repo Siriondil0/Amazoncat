@@ -1,4 +1,10 @@
+<%if @amount != 0%>
+<h3>Nous avons gagné <%=@amount%>$ avec <%@orders.count%> de commandes 
+    <br/>
+    Cela représente <%= @amount / @orders.count%>$ par commande !!!!
+</h3>
 
+<h3>Nous avons <%= @users.count%> visiteurs, qui ont commandé en moyenne <%= @orders.count/@users.count%> </h3>
 
 <h3>Historique des commandes</h3>
 <table class="table" style="color: white;">
@@ -29,3 +35,6 @@
   <% end %>
   </tbody>
 </table>
+<%else%>
+<h2>Personne n'a encore commandé</h2>
+<%end%>

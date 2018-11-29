@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/test', to: 'test#test'
   post '/cart/checkout',  to:'cart#checkout'
   get '/empty', to: 'cart#empty'
+  get '/show_orders/:id', to: 'product#toggle_past'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :product
   resources :charges
