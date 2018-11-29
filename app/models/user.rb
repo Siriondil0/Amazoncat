@@ -4,8 +4,7 @@ class User < ApplicationRecord
   has_one :cart
   has_many :orders
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :confirmable
+         :recoverable, :rememberable, :validatable
   validate :validate_username
   after_create :welcome_email
 
