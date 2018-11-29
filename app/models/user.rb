@@ -6,6 +6,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   validate :validate_username
+  after_create :welcome_email
+
+  def welcome_email
+    UserMailer.welcome_email(self).deliver_now!
+  end
 
   def validate_username
     if User.where(email: username).exists?

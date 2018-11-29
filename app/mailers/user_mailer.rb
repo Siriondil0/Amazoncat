@@ -1,8 +1,7 @@
 class UserMailer < ApplicationMailer
 
 	 def welcome_email(user)
-	  	@user = user
-      mail( to: @user.email, subject: "Inscription Télé à Chat")
+      mail( to: user.email, subject: "Inscription Télé à Chat")
    end
 
    def client_order(user, order)
