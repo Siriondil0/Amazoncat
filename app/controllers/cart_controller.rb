@@ -57,11 +57,8 @@ class CartController < ApplicationController
     else
       @cart.quantities[@ind] = @cart.quantities[@ind].to_i - 1
       if @cart.quantities[@ind] == 0
-        @array = @cart.item_ids
-        @array.delete(params[:id_modify].to_i)
-        @cart.quantities.delete_at(@ind)
+        @cart.quantities[@ind] = @cart.quantities[@ind].to_i + 1
         @cart.save
-        @cart.item_ids = @array
       else
         @cart.save
       end
