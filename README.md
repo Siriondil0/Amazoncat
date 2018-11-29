@@ -19,11 +19,11 @@ Télé à Chat (c'est son nom) est un site qui met en vente des photos de chaton
 
 
 ## La méthodologie:
-TOUT EST FONCTIONNEL ! On a rempli tous les critères du Trello de THP. Sauf pour Active Storage qui, à l'heure ou on écrit ce Readme, galère encore un peu. On espère que la nuit va réssoudre le truc ! 
+TOUT EST FONCTIONNEL ! On a rempli tous les critères du Trello de THP. Sauf pour Active Storage qui, à l'heure où on écrit ce Readme, galère encore un peu. On espère que la nuit va réssoudre le bug  !
 Dans l'ensemble on est resté simple. Pas de feature de l'espace et l'utilisation d'un template bloodstrap.
 
 
-## A noter:
+## A noter :no_entry_sign::no_entry_sign::
 Pour une expérience optimale, lancer le site sur Google Chrome ou Safari. Firefox n'intègre pas l'animation d'un de nos bouton. 
 
 
@@ -43,8 +43,8 @@ En local:
 * Guillaume Pichot  slack/  @Guillaume    :hear_no_evil:
 * Hai-Dang Ha-Thuc  slack/  @Hai-Dang     :skull:
 * Fayçal Meghzili   slack/  @Fays         :guardsman:
-* Samuel Assani     slack/  @sassani      :japanese_ogre:
-* Romain Recher     slack/  @RomainRecher :cop:
+* Samuel Assani     slack/  @sassani      :cop:
+* Romain Recher     slack/  @RomainRecher :japanese_ogre::cop:
 
 ## Une petite blague pour finir :tea: :
 
