@@ -2,6 +2,7 @@
 # THP PROJET EN GROUPE - BOUTIQUE EN LIGNE
 
 IL est là. Il est beau. C'est notre projet de la boutique en ligne !!!!
+
 ![](https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif)
 
 ##  De quoi ça s'agit :
@@ -20,6 +21,10 @@ Télé à Chat (c'est son nom) est un site qui met en vente des photos de chaton
 ## La méthodologie:
 TOUT EST FONCTIONNEL ! On a rempli tous les critères du Trello de THP. Sauf pour Active Storage qui, à l'heure ou on écrit ce Readme, galère encore un peu. On espère que la nuit va réssoudre le truc ! 
 Dans l'ensemble on est resté simple. Pas de feature de l'espace et l'utilisation d'un template bloodstrap.
+
+
+## A noter:
+Pour une expérience optimale, lancer le site sur Google Chrome ou Safari. Firefox n'intègre pas l'animation d'un de nos bouton. 
 
 
 ## Pour le tester 
