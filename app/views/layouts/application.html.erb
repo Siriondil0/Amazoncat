@@ -22,13 +22,9 @@
       <%= render 'shared/modalin'  %>
       <%= render 'shared/modalup'  %>
       
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
+
       <div class ="rendering">
+      <%= render 'layouts/flash_messages' %>
       <%= yield %>
       </div>
 
