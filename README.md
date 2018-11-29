@@ -28,8 +28,8 @@ Dans l'ensemble on est resté simple. Pas de feature de l'espace et l'utilisatio
 Pour une expérience optimale, lancer le site sur Google Chrome ou Safari. Firefox n'intègre pas l'animation d'un de nos bouton. 
 
 
-## Pour le tester 
-En local: 
+## Pour le tester en localt
+* git clone https://github.com/sassani134/Amazoncat.git
 * faire `bundle install`;
 * créer la base de donnée avec `rails db:create`;
 * faire les migrations avec `rails db:migrate`;
@@ -45,7 +45,7 @@ En local:
 * Hai-Dang Ha-Thuc  slack/  @Hai-Dang     :skull:
 * Fayçal Meghzili   slack/  @Fays         :guardsman:
 * Samuel Assani     slack/  @sassani      :cop:
-* Romain Recher     slack/  @RomainRecher :japanese_ogre::cop:
+* Romain Recher     slack/  @RomainRecher :japanese_ogre:
 
 ## Une petite blague pour finir :tea: :
 
