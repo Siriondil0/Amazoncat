@@ -21,7 +21,7 @@ En local:
 
 ## Lien Heroku ::tiger:
 
-[Lien To do list sur Heroku](https://teleachat.herokuapp.com/)
+[Lien Télé à chat sur Heroku](https://teleachat.herokuapp.com/)
 
 ## Projet réalisé par :tea: :
 
