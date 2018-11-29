@@ -1,4 +1,4 @@
-<div class = 'card card-tot'>
+<div class = 'card card-tot d-flex flex-column'>
   <h2>Commande <%=@order.id%></h2>
   <p>&nbsp;</p>
 	<h4>Vous avez payé <%= @order.price  %> $</h4>
@@ -11,6 +11,5 @@
     </div>&nbsp;
   <%end%>
   <p>&nbsp;</p>
-  <br/>
 	<h4> <br/>Date de la commande: <%=@order.created_at%></h4>
 </div>
