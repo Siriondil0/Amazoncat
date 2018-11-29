@@ -35,6 +35,12 @@ photos_url = [
 
 photos_url.each do |url|
 
+<<<<<<< HEAD
     Item.create(title: Faker::Cat.unique.name, description: Faker::Book.author, price: rand(5.0..20.0).round(2), image_url: url )
+=======
+    Item.create(title: Faker::Cat.unique.name, description: Faker::Cat.breed, price: rand(5.0..20.0), image: url )
+
+end
+>>>>>>> 837c63ff75400507feeb767872a31ed33f0010fb
 
 end

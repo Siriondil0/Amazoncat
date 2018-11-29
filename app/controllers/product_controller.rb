@@ -42,4 +42,21 @@ class ProductController < ApplicationController
   def toggle_past
     @order = Order.find(params[:id])
   end
+  
+  def new
+    @items= Item.new
+  end
+
+  def create
+    @item = Item.create(item_params)
+    @item.image.attach(params[:image])
+    redirect_to root_path
+  end
+
+  private
+
+  def item_params
+    #params.require(:item).permit(:title, :description, :price, :image_url)
+    params.permit(:title, :description, :price, image: [])
+  end
 end
