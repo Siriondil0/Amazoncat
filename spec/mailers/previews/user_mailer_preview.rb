@@ -7,10 +7,17 @@ class UserMailerPreview < ActionMailer::Preview
 
    def client_order 
       @user= User.last
-      UserMailer.client_order(@user)
+      @order= Order.create!(user:@user, quantities:[1,1], price:15)
+      @order.item_ids = [1,2]
+      @order.save
+      UserMailer.client_order(@user, @order)
    end
 
     def admin_order
-      UserMailer.admin_order(@amount)
+      @user= User.last
+      @order= Order.create!(user:@user, quantities:[1,1], price:15)
+      @order.item_ids = [1,2]
+      @order.save
+      UserMailer.admin_order(@order)
    end
 end

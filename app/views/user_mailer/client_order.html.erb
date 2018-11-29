@@ -8,14 +8,15 @@
     <h1> Nous préparons votre commande ! </h1>
 
     <p>Voici un résumé de votre sélection : 
+     <p> Total de votre commande : <%= @order.price %> </p>
     <br>
    <% @items.each do |i| %>
-   <%= i.title %><%= link_to i.image_url, image_path(i.image_url), data: {turbolinks: false}%>
-   <%end%></p>
+   <%= i.title %>
+   <p><img width="350" height="230" src="<%= image_path(i.image_url) %>"></p>
+   <%end%>
     <p>Nous vous remercions pour votre confiance.</p>
     <p>A bientôt sur Teleachat.com</p>
 
     
   </body>
 </html>
-
