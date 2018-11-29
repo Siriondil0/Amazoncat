@@ -1,7 +1,7 @@
 
 # THP PROJET EN GROUPE - BOUTIQUE EN LIGNE
 
-IL est là. Il est beau. C'est notre projet de la boutique en ligne !!!!
+Il est là. Il est beau. C'est notre projet de la boutique en ligne !!!!
 
 ![](https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif)
 
