@@ -35,7 +35,7 @@ class ChargesController < ApplicationController
     @content = @cart.items
     @price = 0
     @content.each_with_index do |content, index| 
-      @price += content.price * @cart.quantities[index].to_i
+    @price += content.price * @cart.quantities[index].to_i
     end
     @price
     @convert_price = @price.to_i*100

@@ -15,7 +15,10 @@ class UserMailer < ApplicationMailer
 
    def admin_order(order)
       @order = order
-      mail(to: "thp.grenobleg@gmail.com", subject: "Nouvelle commande passée")
+      @emails = User.where(role: "admin")
+      @emails.each do | email |
+        mail(to: email, subject: "Nouvelle commande passée")
+      end
 	 end
 
 end
