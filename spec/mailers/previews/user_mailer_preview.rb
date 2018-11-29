@@ -14,6 +14,7 @@ class UserMailerPreview < ActionMailer::Preview
    end
 
     def admin_order
+      User.last.admin!
       @user= User.last
       @order= Order.create!(user:@user, quantities:[1,1], price:15)
       @order.item_ids = [1,2]
