@@ -56,7 +56,7 @@ class ChargesController < ApplicationController
         @order.item_ids = @cart.item_ids
         @cart.quantities = []
         @cart.save
-        UserMailer.client_order(@user,@order).deliver_now!
+        UserMailer.client_order(current_user,@order).deliver_now!
         UserMailer.admin_order(@order).deliver_now!
         Cart.where(:user_id => current_user.id)[0].item_ids=[]
       else
