@@ -21,7 +21,7 @@ photos_url = [
 "https://www.petsworld.in/blog/wp-content/uploads/2014/11/American-Shorthair1-1024x640.jpg",
 "https://www.petsworld.in/blog/wp-content/uploads/2014/11/Oriental.jpg",
 "https://www.petsworld.in/blog/wp-content/uploads/2014/11/Sphynx.jpg",
-"https://www.petsworld.in/blog/wp-content/uploads/2015/09/Batman-Cats-Funny.jpg",
+"https://www.petsworld.in/blog/wp-content/uploads/2015/09/cat-nap.jpg",
 "https://www.petsworld.in/blog/wp-content/uploads/2015/09/baby-cat-lifting-weights.jpg",
 "https://www.petsworld.in/blog/wp-content/uploads/2015/09/cat-nikon.jpg",
 "https://www.petsworld.in/blog/wp-content/uploads/2015/09/rockstar-cat.jpg",
@@ -35,6 +35,6 @@ photos_url = [
 
 photos_url.each do |url|
 
-    Item.create(title: Faker::Cat.unique.name, description: Faker::Cat.breed, price: rand(5.0..20.0).round(2), image_url: url )
+    Item.create(title: Faker::Cat.unique.name, description: Faker::Book.author, price: rand(5.0..20.0).round(2), image_url: url )
 
 end
