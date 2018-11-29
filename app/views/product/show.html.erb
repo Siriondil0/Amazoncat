@@ -2,7 +2,8 @@
     <!-- Page Content -->
         <div class="left_show">
           <h1 class="h_show"><%= @item.title %></h1>
-          <img src="<%= @item.image_url %>" class="img_size_show">
+          <div class="img_size_show"><%= image_tag @item.image.variant(resize: "300X300").processed %> </div>
+
         </div>
 
         <div class="right_show">

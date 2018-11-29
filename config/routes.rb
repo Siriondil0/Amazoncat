@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :product
   resources :charges
+  get 'new', to: 'product#new'
+  post 'product/new', to: 'product#create'
 end
