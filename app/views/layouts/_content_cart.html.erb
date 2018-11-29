@@ -34,7 +34,7 @@
 <% if @price !=0 %>
   <div class="row justify-content-between">
     <div class="col-6" >
-      <%= link_to "Vider le panier", "#", class: "btn btn-sm btn-info bouton-d far fa-trash-alt", remote: true,  method: :post %>
+      <%= link_to "Vider le panier", "/empty", class: "btn btn-sm btn-warning bouton-d far fa-trash-alt" %>
     </div>
     <div class="col-6">
         <%= link_to "Payer", "/charges/new", class: "btn btn-lg btn-info bouton-d far fa-trash-alt" %>
