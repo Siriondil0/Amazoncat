@@ -15,7 +15,8 @@
 		    <td><%= order.price  %></td>
         <td><p>
         <%order.items.each_with_index do |item, index|%>
-        <%=order.quantities[index]%> x <%= item.title  %>, 
+        <%=order.quantities[index]%> x <%= item.title  %>
+        <%if order.item_ids.lenght != index+1%>, <%end%>  
         <%end%>
         </p></td>
 			  <td><%=order.created_at%></td>
