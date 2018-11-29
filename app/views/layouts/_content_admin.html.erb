@@ -1,5 +1,5 @@
 <%if @amount != 0%>
-<h3>Nous avons gagné <%=@amount%>$ avec <%@orders.count%> de commandes 
+<h3>Nous avons gagné <%=@amount%>$ avec <%=@orders.count%> de commandes 
     <br/>
     Cela représente <%= @amount / @orders.count%>$ par commande !!!!
 </h3>
