@@ -28,7 +28,7 @@ Dans l'ensemble on est resté simple. Pas de feature de l'espace et l'utilisatio
 Pour une expérience optimale, lancer le site sur Google Chrome ou Safari. Firefox n'intègre pas l'animation d'un de nos bouton. 
 
 
-## Pour le tester en localt
+## Pour le tester en local
 * git clone https://github.com/sassani134/Amazoncat.git
 * faire `bundle install`;
 * créer la base de donnée avec `rails db:create`;
