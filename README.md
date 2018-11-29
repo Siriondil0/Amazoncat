@@ -1,7 +1,7 @@
 
 # THP PROJET EN GROUPE - BOUTIQUE EN LIGNE
 
-Il est là. Il est beau. C'est notre projet de la boutique en ligne !!!!
+Il est là. Il est beau. C'est notre projet de boutique en ligne !!!!
 
 ![](https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif)
 
@@ -16,6 +16,7 @@ Télé à Chat (c'est son nom) est un site qui met en vente des photos de chaton
 - faire des pages secretes que seul l'admin peut voir.
 - envoyer des newsletters par mail à l'inscription et lors des commandes.
 - intégrer du front bien stylé
+- le tout en 4j !
 
 
 ## La méthodologie:
@@ -38,7 +39,7 @@ En local:
 
 [Lien Télé à chat sur Heroku](https://teleachat.herokuapp.com/)
 
-## Projet réalisé par la team de Grenoble : :tea: :
+## Projet réalisé par la team de Grenoble : :trophy: 
 
 * Guillaume Pichot  slack/  @Guillaume    :hear_no_evil:
 * Hai-Dang Ha-Thuc  slack/  @Hai-Dang     :skull:
