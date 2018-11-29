@@ -15,11 +15,11 @@
         <td>Commande <%=order.id%></td>
 		    <td> <%=order.user.email%> </td>
 		    <td><%= order.price  %></td>
-        <td>
-        <%order.item_ids.each_with_index do |item, index|%>
-         <p><%=order.quantities[index]%> fois l'image <%= item%></p>
+        <td><p>
+        <%order.items.each_with_index do |item, index|%>
+        <%=order.quantities[index]%> x <%= item.title  %>, 
         <%end%>
-        </td>
+        </p> </td>
 			  <td>order.created_at</td>
 	    </tr>
     <% end %>
