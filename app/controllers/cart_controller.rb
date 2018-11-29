@@ -100,13 +100,22 @@ class CartController < ApplicationController
         @order.item_ids = @cart.item_ids
         @cart.quantities = []
         @cart.save
-        Cart.where(:user_id => current_user.id)[0].item_ids=[]
+        Cart.where(:user_id => current_user.id)[0].item_ids = []
         redirect_to "/product"
-        flash[:success] = "You successfully did your order"
+        flash[:success] = "Vous avez réussi à passer votre commande. Retrouvez là dans votre onglet commande :)"
       else
         redirect_to "/cart"
-        flash[:alert] = "Your cart is empty"
+        flash[:alert] = "Vous devez avoir des éléments dans votre panier pour commander"
       end
     end
   end
+
+  def empty
+    Cart.where(:user_id => current_user.id)[0].item_ids = []
+    @cart = Cart.where(:user_id => current_user.id)[0]
+    @cart.quantities = []
+    @cart.save
+    redirect_to "/product"
+    flash[:success] = "Votre panier a été vidé, retrouvez maintenant d'autres photos qui pourraient vous plaire"
+  end 
 end
