@@ -1,7 +1,7 @@
 class ProductController < ApplicationController
   def index 
     @items = Item.order(1)
-    
+
     if user_signed_in?
       @cart=Cart.where(:user_id => current_user.id)[0]
       if @cart
@@ -48,6 +48,6 @@ class ProductController < ApplicationController
 
   def item_params
     #params.require(:item).permit(:title, :description, :price, :image_url)
-    params.permit(:title, :description, :price)
+    params.permit(:title, :description, :price, :image)
   end
 end
