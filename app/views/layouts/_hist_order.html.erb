@@ -9,6 +9,7 @@
       <img width="90" height="75" class="card-img-top" src='<%=item.image_url%>' alt="">
       <p><%=@order.quantities[index]%> x <%= item.title  %></p>
     </div>&nbsp;
+  </div>
   <%end%>
   <p>&nbsp;</p>
 	<h4> <br/>Date de la commande: <%=@order.created_at%></h4>
