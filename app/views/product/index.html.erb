@@ -13,7 +13,7 @@
           <% @items.each do |item|  %>
             <div class="col-lg-4 col-md-6 mb-4" id="img-<%=item.id%>">
               <div class="card h-100">
-                <p><%= image_tag item.image.variant(resize: "300X300").processed %> </p>
+                <p><%= image_tag item.image.variant(resize: "450X450").processed %> </p>
 
                 <div class="card-body">
                   <h4 class="card-title">
