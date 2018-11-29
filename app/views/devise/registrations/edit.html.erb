@@ -1,10 +1,9 @@
-<br/><br/><br/>
 <div class="container">
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4">
       <div class="align-content-between">
         <div class="light-well">
-          <h2 class="page-header text-center">Modifier mon profil <%= resource_name.to_s.humanize %></h2>
+          <h3 class="page-header text-center">Modifier mon profil</h3>
 
           <%= form_for resource, as: resource_name, url: registration_path(resource_name), html: { method: :put },
           html: { class: "form-horizontal center"} do |f| %>
@@ -44,13 +43,12 @@
             <%= devise_error_messages! %>
           <% end %>
         </div>
-        <br>
-        <br>
+        <br/><br/>
         <div>
           <h3 class="page-header text-center">Cancel my account</h3>
           <p>Unhappy? <%= button_to "Delete my account", registration_path(resource_name), class: "btn btn-danger btn-lg btn-block", data: { confirm: "Are you sure?" }, method: :delete %></p>
           <%= link_to "Back", :back, class: "btn btn-sm btn-info bouton-d far fa-trash-alt" %>
-        </div><br/>
+        </div><br/><br/><br/>
       </div>
     </div>
   </div>
