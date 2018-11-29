@@ -7,10 +7,15 @@
     <h1> Bonjour <%= @user.username %> </h1>
     <h1> Nous préparons votre commande ! </h1>
 
-    <p>Le total de votre commande est de: </p>
+    <p>Voici un résumé de votre sélection : 
+    <br>
+   <% @items.each do |i| %>
+   <%= i.title %><%= link_to i.image_url, image_path(i.image_url), data: {turbolinks: false}%>
+   <%end%></p>
     <p>Nous vous remercions pour votre confiance.</p>
     <p>A bientôt sur Teleachat.com</p>
 
     
   </body>
 </html>
+

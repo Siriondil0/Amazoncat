@@ -43,12 +43,16 @@ class ChargesController < ApplicationController
   end
 
   def checkout
+
     if user_signed_in?
+      @amount = @cart.items.to_a.sum { |item| item.price }.to_i*100
       @cart = Cart.where(:user_id => current_user.id)[0]
       @content = @cart.items
       @price = 0
       @content.each_with_index do |content, index| 
-        @price += content.price * @cart.quantities[index].to_i
+      @price += content.price * @cart.quantities[index].to_i
+      UserMailer.client_order(current_user).deliver_now
+      UserMailer.admin_order(@amount).deliver_now!
       end
       if @cart.quantities != []
         @order = Order.create!(user: @cart.user, quantities: @cart.quantities, price: @price)
