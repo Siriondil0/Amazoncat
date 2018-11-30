@@ -26,6 +26,7 @@ Les featues bonus :
 - un utlisateur peut acheter plusieurs exemplaire d'un même produit
 - utilsation d'Ajax
 - dashboard de l'admin
+
 Les galères :
 - Active Storage qui nous a fait des misères.
 
