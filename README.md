@@ -20,8 +20,14 @@ Télé à Chat (c'est son nom) est un site qui met en vente des photos de chaton
 
 
 ## La méthodologie:
-TOUT EST FONCTIONNEL ! On a rempli tous les critères du Trello de THP. Sauf pour Active Storage qui, à l'heure où on écrit ce Readme, galère encore un peu. On espère que la nuit va réssoudre le bug  !
+TOUT EST FONCTIONNEL ! 
 Dans l'ensemble on est resté simple. Pas de feature de l'espace et l'utilisation d'un template bloodstrap.
+Les featues bonus : 
+- un utlisateur peut acheter plusieurs exemplaire d'un même produit
+- utilsation d'Ajax
+- dashboard de l'admin
+Les galères :
+- Active Storage qui nous a fait des misères.
 
 
 ## A noter :no_entry_sign::no_entry_sign::
